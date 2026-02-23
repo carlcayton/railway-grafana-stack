@@ -1,3 +1,5 @@
+search_enabled: true
+
 server:
   http_listen_port: 3200
 
@@ -12,8 +14,6 @@ storage:
       path: /var/tempo/traces
     wal:
       path: /var/tempo/wal
-    search:
-      enabled: true
 
 distributor:
   log_received_spans:
