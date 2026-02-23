@@ -10,10 +10,14 @@ storage:
     backend: local
     local:
       path: /var/tempo/traces
+    wal:
+      path: /var/tempo/wal
+    search:
+      enabled: true
 
 distributor:
   log_received_spans:
-        enabled: true
+    enabled: true
   receivers:
     otlp:
       protocols:
@@ -23,5 +27,7 @@ distributor:
           endpoint: "0.0.0.0:4318"
 
 query_frontend:
+  search:
+    max_duration: 0s
   mcp_server:
     enabled: true
