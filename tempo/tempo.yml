@@ -26,6 +26,6 @@ distributor:
 
 query_frontend:
   search:
-    max_duration: 0s
+    max_duration: 168h
   mcp_server:
     enabled: true
